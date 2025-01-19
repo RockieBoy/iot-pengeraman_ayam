@@ -18,6 +18,7 @@ const mqttClient = mqtt.connect('wss://public.cloud.shiftr.io:443/mqtt', {
     username: "public",
     password: "public"
 });
+
 mqttClient.on("connect", () => {
   console.log("MQTT Connected");
 });
