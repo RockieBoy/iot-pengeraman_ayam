@@ -51,7 +51,7 @@
     </div>
 </div>
 <div class="p-6 mb-8 bg-white rounded-lg shadow-lg">
-    <h2 class="mb-4 text-xl font-bold">Control Waktu Nyala</h2>
+<h2 class="mb-4 text-xl font-bold">Jadwal Lampu</h2>
     
 <form class="max-w-[16rem] grid grid-cols-2 gap-4">
     <div>
@@ -62,7 +62,7 @@
                     <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z" clip-rule="evenodd"/>
                 </svg>
             </div>
-            <input type="time" id="start-time" class="bg-gray-50 border leading-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" min="09:00" max="18:00" value="00:00" required />
+            <input type="time" id="start-time-lamp" class="bg-gray-50 border leading-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="13:00" required />
         </div>
     </div>
     <div>
@@ -73,12 +73,39 @@
                     <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z" clip-rule="evenodd"/>
                 </svg>
             </div>
-            <input type="time" id="end-time" class="bg-gray-50 border leading-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" min="09:00" max="18:00" value="00:00" required />
+            <input type="time" id="end-time-lamp" name="startTime" class="bg-gray-50 border leading-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="00:00" required />
         </div>
     </div>
-    <button type="submit" class="text-blue-700 dark:text-blue-500 text-sm hover:underline p-0">Simpan Waktu</button>
+    <button type="submit" id="button-time-lamp" class="text-blue-700 dark:text-blue-500 text-sm hover:underline p-0">Simpan Waktu</button>
 </form>
-
+</div>
+<div class="p-6 mb-8 bg-white rounded-lg shadow-lg">
+<h2 class="mb-4 text-xl font-bold">Jadwal Kipas</h2>    
+<form class="max-w-[16rem] grid grid-cols-2 gap-4">
+    <div>
+        <label for="start-time" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Waktu Mulai:</label>
+        <div class="relative">
+            <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z" clip-rule="evenodd"/>
+                </svg>
+            </div>
+            <input type="time" id="start-time-fan" class="bg-gray-50 border leading-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="13:00" required />
+        </div>
+    </div>
+    <div>
+        <label for="end-time" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Waktu Berakhir:</label>
+        <div class="relative">
+            <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z" clip-rule="evenodd"/>
+                </svg>
+            </div>
+            <input type="time" id="end-time-fan" name="startTime" class="bg-gray-50 border leading-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="00:00" required />
+        </div>
+    </div>
+    <button type="submit" id="button-time-fan" class="text-blue-700 dark:text-blue-500 text-sm hover:underline p-0">Simpan Waktu</button>
+</form>
 </div>
 
 <!-- Fan Confirmation Modal -->
@@ -158,12 +185,15 @@
 
         // Log when the client connects
         client.on('connect', () => {
-            console.log('Connected to MQTT broker');
             client.subscribe('kandang_ayam/temperature');
             client.subscribe('kandang_ayam/humidity');
             client.subscribe('kandang_ayam/fan');
             client.subscribe('kandang_ayam/lamp');
-            client.subscribe('kandang_ayam/timer');
+            console.log('Connected to MQTT broker');
+
+
+            client.publish('kandang_ayam/fan');
+            client.publish('kandang_ayam/lamp'); 
         });
 
         // Log incoming messages and update the UI accordingly
@@ -200,8 +230,10 @@
             if (topic === 'kandang_ayam/timer') {
                 console.log(`Timer setting received: ${messageString}`);
             }
+            
         });
 
+        
         // Log errors
         client.on('error', (error) => {
             console.error('MQTT Error:', error);
@@ -293,6 +325,80 @@
                 }
             }
         });
+
+        // Timer Lamp
+        const startTime = document.getElementById("start-time-lamp")
+        const endTime = document.getElementById("end-time-lamp")
+        const buttonTime = document.getElementById("button-time-lamp")
+        const url = "http://localhost:3000" 
+        function getDataTime() {
+            fetch(`${url}/api/schedule/lamp`,{
+                method : "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "ngrok-skip-browser-warning": "69420"
+                },
+            }).then(res => res.json())
+            .then(data => {
+                startTime.value = data.startTime ?? "00:00"
+                endTime.value = data.endTime ?? "00:00"
+            })
+        }
+        getDataTime()
+        function inputDataTime() {
+            fetch(`${url}/api/schedule/lamp`,{
+            method : "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "ngrok-skip-browser-warning": "69420"
+            },
+            body : JSON.stringify({
+                "startTime" : startTime.value,
+                "endTime" : endTime.value,
+            })
+            }).then(res => res.json())
+        }
+
+        buttonTime.addEventListener('click', (e) => inputDataTime())
+
+        // Timer Fan
+        const startTimeFan = document.getElementById("start-time-fan")
+        const endTimeFan = document.getElementById("end-time-fan")
+        const buttonTimeFan = document.getElementById("button-time-fan")
+
+        function getDataFan(params) {
+            fetch(`${url}/api/schedule/fan`,{
+                method : "GET",
+                headers: {
+                "ngrok-skip-browser-warning": "69420"
+            },
+            }).then(res => res.json())
+            .then(data => {
+                console.log(data);
+                
+                    startTimeFan.value = data?.startTime ?? "14:00"
+                    endTimeFan.value = data?.endTime ?? "00:00"
+            }).catch(error => {
+                console.error(error);
+                
+            })
+        }
+        getDataFan()
+        function inputDataFan(params) {
+            fetch(`${url}/api/schedule/fan`,{
+            method : "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "ngrok-skip-browser-warning": "69420"
+            },
+            body : JSON.stringify({
+                "startTime" : startTimeFan.value,
+                "endTime" : endTimeFan.value,
+            })
+            }).then(res => res.json())
+        }
+        
+        buttonTimeFan.addEventListener('click', (e) => inputDataFan())
     </script>
 </body>
 </html>
